@@ -1,50 +1,32 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
-
-void cabecalho(){
-	system("cls||clear");
-}
+#include <string.h>
 
 int main(){
-	//Declaração de Variaveis
-	int numero1,numero2;
-	float soma,produto,media;
+	//Declarando Variaveis
+	int numerodemacascompradas;
+	float precodasmacas,valortotal;
+	setlocale(LC_ALL,"");
 	
-	//Solicite dados ao usuario
-	printf("Escolha um numero: ");
-	scanf("%i",&numero1);
-	printf("Escolha outro numero: ");
-	scanf("%i",&numero2);
-	
-	//Operadores aritméticos
-	soma=numero1+numero2;
-	produto=numero1*numero2;
-	media=(numero1+numero2)/2;
+	//Central de Comando
+	printf("Quantas maçãs você deseja? ");
+	scanf("%i",&numerodemacascompradas);
+	system("cls || clear");
 	
 	//Valores Condicionais
-	if(numero1>numero2){
-		printf("Soma: %f \n",soma);
-		printf("Produto: %f \n",produto);
-		printf("Media: %f \n",media);
-		printf("Maior valor:%f \n",numero1);
-		printf("Menor valor:%f \n",numero2);}
-		
-		if(numero1<numero2){
-		printf("Soma: %f \n",soma);
-		printf("Produto: %f \n",produto);
-		printf("Media: %f \n",media);
-		printf("Maior valor:%f \n",numero2);
-		printf("Menor valor:%f \n",numero1);}
-		
-		
-		
-		
-	if(numero1=numero2){
-		printf("Soma: %f \n",soma);
-		printf("Produto: %f \n",produto);
-		printf("Media: %f \n",media);
-		printf(numero1,"é igual a",numero2);}
+	if(numerodemacascompradas<=12){
 	
+	precodasmacas=1.30;
 	
+}else{
+	precodasmacas=1.20;
 }
+//Operadores aritmeticos
+valortotal=precodasmacas * numerodemacascompradas;
+
+printf("Numero de maçãs compradas: %i \n",numerodemacascompradas);
+printf("Valor Total: %.1f. \n",valortotal);
+
+}
+
