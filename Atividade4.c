@@ -1,32 +1,18 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <locale.h>
-#include <string.h>
 
 int main(){
-	//Declarando Variaveis
-	int numerodemacascompradas;
-	float precodasmacas,valortotal;
-	setlocale(LC_ALL,"");
 	
-	//Central de Comando
-	printf("Quantas maçãs você deseja? ");
-	scanf("%i",&numerodemacascompradas);
-	system("cls || clear");
+	int numero,antecessor,sucessor;
 	
-	//Valores Condicionais
-	if(numerodemacascompradas<=12){
 	
-	precodasmacas=1.30;
+	printf("Escolha um numero: ");
+	scanf("%i",&numero);
 	
-}else{
-	precodasmacas=1.20;
+	printf("----Resultados----\n");
+	printf("Numero escolhido:%i\n",numero);
+	antecessor=numero-1;
+	printf("Numero antecessor:%i\n",antecessor);
+	sucessor=numero+1;
+	printf("Numero sucessor:%i\n",sucessor);
+	
 }
-//Operadores aritmeticos
-valortotal=precodasmacas * numerodemacascompradas;
-
-printf("Numero de maçãs compradas: %i \n",numerodemacascompradas);
-printf("Valor Total: %.1f. \n",valortotal);
-
-}
-
