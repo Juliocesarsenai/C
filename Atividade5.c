@@ -1,13 +1,27 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <string.h>
 
 int main(){
+	setlocale(LC_ALL,"");
 	
-	float salariominimo,salario,salarioequivalente;
-	salariominimo=1412.00;
+	//Declaração de Variaveis
+	float notas,media,soma;
+	int i;
 	
-	printf("Qual é o seu salario: ");
-	scanf("%f",&salario);
-	salarioequivalente=salario/salariominimo;
-	printf("O seu salario equivale aproximadamente a %.2f. ",salarioequivalente,"salarios minimos");
-}
+	
+	//Solicitando dados ao usuario
+	for(i=1;i<=4;i++){
+	printf("Informe a sua %iª nota: \n",i);
+	scanf("%f",&notas);
+	soma=soma + notas;
+	}
+	
 
+	
+	
+	//Expondo dados do usuario
+		media=soma/4;
+		printf("Media: %.1f. \n",media);
+}
