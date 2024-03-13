@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <locale.h>
+#include <ctype.h>
 
 
 int main(){
 	setlocale(LC_ALL,"");
-	//Declaração de Variaveis
+	//DeclaraÃ§Ã£o de Variaveis
 	float notas,soma=0,media;
 	int i=0;
 	char resposta;
@@ -19,6 +20,7 @@ int main(){
 	
 	printf("Insira uma nota:\n");
 	scanf("%f",&notas);
+	resposta=toupper(resposta);
 	setbuf(stdin,0);
 	printf("Deseja inserir mais uma nota? S/N \n");
 	scanf("%c",&resposta);
@@ -28,12 +30,12 @@ int main(){
 	soma=soma + notas;
 	}while(resposta=='S');
 	
-	//Operações aritmeticas
+	//OperaÃ§Ãµes aritmeticas
 
 	media=soma/i;
 
 printf("Media: %.1f. \n",media);
-printf("Numero de repetições: %d \n",i);
+printf("Numero de repetiÃ§Ãµes: %d \n",i);
 }
 
 
